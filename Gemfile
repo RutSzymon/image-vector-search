@@ -41,6 +41,8 @@ gem "kamal", require: false
 gem "thruster", require: false
 
 gem "onnxruntime"
+gem "neighbor"
+gem "pry"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

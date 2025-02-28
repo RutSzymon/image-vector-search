@@ -86,6 +86,7 @@ GEM
       racc
     builder (3.3.0)
     byebug (11.1.3)
+    coderay (1.1.3)
     concurrent-ruby (1.3.4)
     connection_pool (2.5.0)
     crass (1.0.6)
@@ -146,12 +147,15 @@ GEM
       net-pop
       net-smtp
     marcel (1.0.4)
+    method_source (1.1.0)
     mini_magick (5.1.2)
       benchmark
       logger
     mini_mime (1.1.5)
     minitest (5.25.4)
     msgpack (1.7.5)
+    neighbor (0.5.2)
+      activerecord (>= 7)
     net-imap (0.5.5)
       date
       net-protocol
@@ -190,6 +194,9 @@ GEM
       activesupport (>= 7.0.0)
       rack
       railties (>= 7.0.0)
+    pry (0.15.2)
+      coderay (~> 1.1)
+      method_source (~> 1.0)
     psych (5.2.2)
       date
       stringio
@@ -359,9 +366,11 @@ DEPENDENCIES
   jbuilder
   kamal
   mini_magick
+  neighbor
   numo-narray
   onnxruntime
   propshaft
+  pry
   puma (>= 5.0)
   rails (~> 8.0.1)
   rspec-rails
