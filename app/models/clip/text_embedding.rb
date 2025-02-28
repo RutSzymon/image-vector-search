@@ -1,15 +1,15 @@
 class CLIP::TextEmbedding
-  def initialize(model_path: "model/textual.onnx", preprocessor: CLIP::Tokenizer.new)
+  def initialize(model_path: "model/textual.onnx", tokenizer: CLIP::Tokenizer.new)
     @model = OnnxRuntime::Model.new(model_path)
-    @preprocessor = preprocessor
+    @tokenizer = tokenizer
   end
 
   def call(text)
-    tokens = preprocessor.preprocess(text).to_a
+    tokens = tokenizer.encode(text)
     model.predict({ input: [ tokens ] })["output"].first
   end
 
   private
 
-  attr_reader :model, :preprocessor
+  attr_reader :model, :tokenizer
 end
