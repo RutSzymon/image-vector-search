@@ -42,6 +42,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_01_18_175923) do
   create_table "photos", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.binary "embedding"
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
